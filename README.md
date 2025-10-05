@@ -23,7 +23,7 @@
 
 First I wrote the plan to give a guideline and help me understand what and how I will do this. Then I wrote the Co-Pilot Instructions file that will help the AI system to better understand the code and what it may or may not do, it looks at it for each request. I did this by copying elements from the old_README.md, this does take some time but overall it pays off when working on a codebase overtime.
 
-
+Ran the build.bat file and saw errors, searched up errors and installed the modern SDK for C# with the help of AI.
 
 ## Proposed Next Steps
 
