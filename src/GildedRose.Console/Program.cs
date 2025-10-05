@@ -1,18 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 
 namespace GildedRose.Console;
 
 public class Program
 {
     public IList<Item> Items = new List<Item>();
-    
+
+
     static void Main(string[] args)
     {
         System.Console.WriteLine("OMGHAI!");
 
         var app = new Program()
-                      {
-                          Items = new List<Item>
+        {
+            Items = new List<Item>
                                       {
                                           new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                                           new Item {Name = "Aged Brie", SellIn = 2, Quality = 0},
@@ -27,7 +30,7 @@ public class Program
                                           new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
                                       }
 
-                      };
+        };
 
         app.UpdateQuality();
 
@@ -40,13 +43,7 @@ public class Program
         {
             if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
             {
-                if (Items[i].Quality > 0)
-                {
-                    if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                    {
-                        Items[i].Quality = Items[i].Quality - 1;
-                    }
-                }
+                DecreaseQuality(Items[i]);
             }
             else
             {
@@ -86,13 +83,7 @@ public class Program
                 {
                     if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
                     {
-                        if (Items[i].Quality > 0)
-                        {
-                            if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                            {
-                                Items[i].Quality = Items[i].Quality - 1;
-                            }
-                        }
+                      DecreaseQuality(Items[i]);
                     }
                     else
                     {
@@ -109,6 +100,19 @@ public class Program
             }
         }
     }
+    
+    private void DecreaseQuality(Item item)
+        {
+            if (item.Quality > 0)
+            {
+                if (item.Name != "Sulfuras, Hand of Ragnaros")
+                {
+                    item.Quality = item.Quality - 1;
+                }
+            }
+    }
+
+
 }
 
 public class Item
@@ -119,3 +123,6 @@ public class Item
 
     public int Quality { get; set; }
 }
+
+
+

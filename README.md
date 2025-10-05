@@ -31,6 +31,23 @@ Program uses ALOT of if statements to make decisions, works but is not effective
 
 As I have written the behavior of the items already in the copilot instructions this now comes in handy as now I can generate more test cases without need of additional context. Did three batches total. 
 
+Now that we have a proper snapshot of the initial output of the system we can now look at the code and start making small changes, this line of repeated code seems to be reducing the item quality by 1,
+
+```csharp
+if (Items[i].Quality > 0)
+{
+    if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+    {
+        Items[i].Quality = Items[i].Quality - 1;
+    }
+}
+```
+So I will make a small helper function inside the program to help, then replace this by a call.
+
+It passed all test cases, so therefore this small refactor worked.
+
+
+
 
 
 

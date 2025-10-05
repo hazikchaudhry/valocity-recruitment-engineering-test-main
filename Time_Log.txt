@@ -12,4 +12,6 @@ Task 2
 
 5:17 - 5:31 - Setup, 15 mins
 
-5:31 - , Testing and writing test cases, 
+5:31 - 6:00 - Testing and writing test cases, 30 mins
+
+6:00 - 6:15 - made first small refactor DecreaseQuality, 15 mins
