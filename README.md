@@ -46,6 +46,8 @@ So I will make a small helper function inside the program to help, then replace 
 
 It passed all test cases, so therefore this small refactor worked.
 
+Saw another repeated code block for increasing, made a helper method for that as well, only replaced exact code for small improvements, passed all test cases so refactor is good, After each increase or decrease it would be nice if the user got a print message so confirm the system status.
+
 
 
 

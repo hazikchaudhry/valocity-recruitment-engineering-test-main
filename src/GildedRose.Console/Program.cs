@@ -47,29 +47,22 @@ public class Program
             }
             else
             {
-                if (Items[i].Quality < 50)
-                {
-                    Items[i].Quality = Items[i].Quality + 1;
+                
+                    IncreaseQuality(Items[i]);
 
                     if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
                     {
                         if (Items[i].SellIn < 11)
                         {
-                            if (Items[i].Quality < 50)
-                            {
-                                Items[i].Quality = Items[i].Quality + 1;
-                            }
+                            IncreaseQuality(Items[i]);
                         }
 
                         if (Items[i].SellIn < 6)
                         {
-                            if (Items[i].Quality < 50)
-                            {
-                                Items[i].Quality = Items[i].Quality + 1;
-                            }
+                            IncreaseQuality(Items[i]);
                         }
                     }
-                }
+                
             }
 
             if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
@@ -83,7 +76,7 @@ public class Program
                 {
                     if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
                     {
-                      DecreaseQuality(Items[i]);
+                        DecreaseQuality(Items[i]);
                     }
                     else
                     {
@@ -92,24 +85,29 @@ public class Program
                 }
                 else
                 {
-                    if (Items[i].Quality < 50)
-                    {
-                        Items[i].Quality = Items[i].Quality + 1;
-                    }
+                    IncreaseQuality(Items[i]);
                 }
             }
         }
     }
-    
+
     private void DecreaseQuality(Item item)
+    {
+        if (item.Quality > 0)
         {
-            if (item.Quality > 0)
+            if (item.Name != "Sulfuras, Hand of Ragnaros")
             {
-                if (item.Name != "Sulfuras, Hand of Ragnaros")
-                {
-                    item.Quality = item.Quality - 1;
-                }
+                item.Quality = item.Quality - 1;
             }
+        }
+    }
+    
+    private void IncreaseQuality(Item item)
+    {
+        if (item.Quality < 50)
+        {
+            item.Quality = item.Quality + 1;
+        }
     }
 
 
