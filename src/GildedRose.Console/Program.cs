@@ -2,9 +2,9 @@
 
 namespace GildedRose.Console;
 
-class Program
+public class Program
 {
-    IList<Item> Items = new List<Item>();
+    public IList<Item> Items = new List<Item>();
     
     static void Main(string[] args)
     {
