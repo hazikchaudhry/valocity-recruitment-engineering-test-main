@@ -25,7 +25,13 @@ First I wrote the plan to give a guideline and help me understand what and how I
 
 Ran the build.bat file and saw errors, searched up errors and installed the modern SDK for C# with the help of AI.
 
-Started off by reading the main file properly, and then writing a test case to see functionality. Using AI I fed in the expected input and output for a regular Item and understood how to write a test in this framework. Had to make the program class public and add a reference in the csproj file to run the test cases. Program uses ALOT of if statements to make decisions, works but is not effective and not readable.
+Started off by reading the main file properly, and then writing a test case to see functionality. Using AI I fed in the expected input and output for a regular Item and understood how to write a test in this framework. Had to make the program class public and add a reference in the csproj file to run the test cases. 
+
+Program uses ALOT of if statements to make decisions, works but is not effective and not readable.
+
+As I have written the behavior of the items already in the copilot instructions this now comes in handy as now I can generate more test cases without need of additional context
+
+
 
 
 ## Proposed Next Steps
