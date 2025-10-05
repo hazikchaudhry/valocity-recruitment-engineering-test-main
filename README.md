@@ -19,6 +19,43 @@
 
 ## How to run
 
+# How to Run Gilded Rose
+
+## Prerequisites
+- .NET Framework or .NET Core installed
+- Visual Studio or any C# compatible IDE
+
+## Running the Application
+
+### Method 1: Using Visual Studio
+1. Open GildedRose.sln in Visual Studio
+2. Set GildedRose.Console as startup project
+3. Press F5 or click Run
+
+### Method 2: Command Line
+Navigate to the project directory and run:
+```
+cd src\GildedRose.Console
+dotnet run
+```
+
+### Method 3: Using build.bat
+From the root directory:
+```
+build.bat
+```
+
+## Expected Output
+The application will display "OMGHAI!" and show the current state of all items, then wait for a key press before closing.
+
+## Running Tests
+```
+cd src\GildedRose.Tests
+dotnet test
+```
+
+
+
 ## Design notes
 
 First I wrote the plan to give a guideline and help me understand what and how I will do this. Then I wrote the Co-Pilot Instructions file that will help the AI system to better understand the code and what it may or may not do, it looks at it for each request. I did this by copying elements from the old_README.md, this does take some time but overall it pays off when working on a codebase overtime.
