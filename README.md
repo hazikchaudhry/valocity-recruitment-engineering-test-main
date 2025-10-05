@@ -50,11 +50,59 @@ Saw another repeated code block for increasing, made a helper method for that as
 
 Did some small refactoring for the expiry of the item, this could be useful in future, passed all tests
 
-
+Now since its the final 10 ish mins, I will write about the next steps.
 
 
 
 ## Proposed Next Steps
 
+The plan in my head was something like this 
+
+Phase 1: Characterization Tests 
+Phase 2: Extract helper methods (DecreaseQuality, etc) <- Here Currently
+
+
+### Phase 3: Extract item-specific methods 
+Extract SellIn management method
+Add item type checking methods
+
+### Phase 4: Introduce polymorphism 
+Create update methods for each item type
+Simplify main method with cleaner conditionals
+
+### Phase 5: Add Strategy pattern 
+Define strategy interface
+Create strategy implementations for each item type
+Implement strategy selection logic
+
+Strategy pattern is favoured over Factory or Template Method because it encapsulates algorithms at runtime, making it straightforward to add new item types without modifying existing code. Each item type gets its own strategy class with complete control over its update behaviour.
+
+
+
+Production Considerations for Gilded Rose
+
+User Interface Requirements
+Product users would benefit from a proper interface to explain the business rules clearly. Current string-based item identification is fragile and unclear.
+
+Collaborative Development Practices
+For team collaboration, would implement proper Git branching strategy, pull requests, code reviews, and continuous integration pipelines.
+
+Production Readiness
+Live deployment requires robust error handling, comprehensive logging, user-friendly interface for inventory management, and proper validation of item data.
+
+Key Concerns
+User impact: Changes could affect inventory calculations
+Invariants: Quality bounds (0-50), Sulfuras properties must remain constant
+Guardrails: Input validation, defensive programming against invalid items
+Clarity: Business rules need documentation, better naming conventions for item types
+
+Risk Mitigation
+Comprehensive test coverage, gradual rollout, monitoring, and rollback capabilities essential before production deployment.
+
+
 ## Assumptions & known gaps
+
+Assuming the initial code was correct in terms of functionality fully, the test cases confirmed this
+
+I do work more with Java, due to my coursework, but the concepts are the same the syntax make it a bit less slower to write code quickly, but I still get it 
 
