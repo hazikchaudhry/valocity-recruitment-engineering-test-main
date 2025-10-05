@@ -17,3 +17,5 @@ Task 2
 6:00 - 6:15 - made first small refactor DecreaseQuality, 15 mins
 
 6:15 - 6:24 - made second refactor IncreaseQuality, 10 mins
+
+6:24 - 6:28 - made small IsExpired method added, 4 mins
