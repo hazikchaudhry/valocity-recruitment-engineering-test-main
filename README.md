@@ -29,7 +29,8 @@ Started off by reading the main file properly, and then writing a test case to s
 
 Program uses ALOT of if statements to make decisions, works but is not effective and not readable.
 
-As I have written the behavior of the items already in the copilot instructions this now comes in handy as now I can generate more test cases without need of additional context
+As I have written the behavior of the items already in the copilot instructions this now comes in handy as now I can generate more test cases without need of additional context. Did three batches total. 
+
 
 
 
@@ -37,3 +38,4 @@ As I have written the behavior of the items already in the copilot instructions 
 ## Proposed Next Steps
 
 ## Assumptions & known gaps
+
